@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>上传文件</title>
+</head>
+<body>
+    <h2>上传文件</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+        选择文件：<input type="file" name="file"><br>
+        可选新文件名：<input type="text" name="customName"><br>
+        <p>支持 txt、pdf、png、jpg、jpeg、zip，单文件最大 10MB。</p>
+        <button type="submit">上传</button>
+    </form>
+    <a href="/listfiles">返回文件列表</a>
+</body>
+</html>

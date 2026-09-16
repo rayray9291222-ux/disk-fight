@@ -1,0 +1,223 @@
+2026-09-16 09:05:23,019 WARNING upload_rejected user=user1 ip=127.0.0.1 name=test.php reason=extension
+2026-09-16 09:05:23,022 WARNING upload_rejected user=user1 ip=127.0.0.1 name=fake.png reason=content_mismatch
+2026-09-16 09:05:23,032 INFO upload_allowed user=user1 ip=127.0.0.1 original=user1_secret.txt stored=37cf4c6b65774b58bf1c0fee69a09290.txt size=20 type=text/plain
+2026-09-16 09:05:23,065 INFO download user=user1 stored=37cf4c6b65774b58bf1c0fee69a09290.txt
+2026-09-16 09:05:23,131 INFO logout user=user1
+2026-09-16 09:06:32,844 WARNING upload_rejected user=user1 ip=127.0.0.1 name=test.php reason=extension
+2026-09-16 09:06:32,847 WARNING upload_rejected user=user1 ip=127.0.0.1 name=fake.png reason=content_mismatch
+2026-09-16 09:06:32,855 INFO upload_allowed user=user1 ip=127.0.0.1 original=user1_secret.txt stored=b9137786907945cf8470815b246fbadc.txt size=20 type=text/plain
+2026-09-16 09:06:32,873 INFO download user=user1 stored=b9137786907945cf8470815b246fbadc.txt
+2026-09-16 09:06:32,895 INFO logout user=user1
+2026-09-16 09:13:32,214 WARNING upload_rejected user=user1 ip=127.0.0.1 name=test.php reason=extension
+2026-09-16 09:13:32,217 WARNING upload_rejected user=user1 ip=127.0.0.1 name=fake.png reason=content_mismatch
+2026-09-16 09:13:32,226 INFO upload_allowed user=user1 ip=127.0.0.1 original=user1_secret.txt stored=4505f58210a647dcb6bd94a7df1649cb.txt size=20 type=text/plain
+2026-09-16 09:13:32,249 INFO download user=user1 stored=4505f58210a647dcb6bd94a7df1649cb.txt
+2026-09-16 09:13:32,273 INFO logout user=user1
+2026-09-16 09:22:45,133 WARNING upload_rejected user=user1 ip=127.0.0.1 name=test.php reason=extension
+2026-09-16 09:22:45,134 WARNING upload_rejected user=user1 ip=127.0.0.1 name=fake.png reason=content_mismatch
+2026-09-16 09:22:45,142 INFO upload_allowed user=user1 ip=127.0.0.1 original=user1_secret.txt stored=386ba989ab734a309b25391402fc7c0d.txt size=20 type=text/plain
+2026-09-16 09:22:45,159 INFO download user=user1 stored=386ba989ab734a309b25391402fc7c0d.txt
+2026-09-16 09:22:45,179 INFO logout user=user1
+2026-09-16 09:25:38,546 WARNING upload_rejected user=user1 ip=127.0.0.1 name=test.php reason=extension
+2026-09-16 09:25:38,548 WARNING upload_rejected user=user1 ip=127.0.0.1 name=fake.png reason=content_mismatch
+2026-09-16 09:25:38,557 INFO upload_allowed user=user1 ip=127.0.0.1 original=user1_secret.txt stored=9ea62819577b4be9a9576da23df56263.txt size=20 type=text/plain
+2026-09-16 09:25:38,576 INFO download user=user1 stored=9ea62819577b4be9a9576da23df56263.txt
+2026-09-16 09:25:38,599 INFO logout user=user1
+2026-09-16 09:48:30,818 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-09-16 09:48:30,818 INFO [33mPress CTRL+C to quit[0m
+2026-09-16 09:48:36,847 INFO 127.0.0.1 - - [16/Sep/2026 09:48:36] "GET / HTTP/1.1" 200 -
+2026-09-16 09:48:36,965 INFO 127.0.0.1 - - [16/Sep/2026 09:48:36] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-09-16 09:48:38,892 INFO 127.0.0.1 - - [16/Sep/2026 09:48:38] "GET /register HTTP/1.1" 200 -
+2026-09-16 09:48:38,926 INFO 127.0.0.1 - - [16/Sep/2026 09:48:38] "GET /static/css/style.css?v=2 HTTP/1.1" 200 -
+2026-09-16 09:48:38,927 INFO 127.0.0.1 - - [16/Sep/2026 09:48:38] "GET /static/js/register.js HTTP/1.1" 200 -
+2026-09-16 09:48:56,552 ERROR Exception on /register [POST]
+Traceback (most recent call last):
+  File "D:\dev\python\python3.13.5\Lib\site-packages\pymysql\connections.py", line 661, in connect
+    sock = socket.create_connection(
+        (self.host, self.port), self.connect_timeout, **kwargs
+    )
+  File "D:\dev\python\python3.13.5\Lib\socket.py", line 864, in create_connection
+    raise exceptions[0]
+  File "D:\dev\python\python3.13.5\Lib\socket.py", line 849, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dev\python\python3.13.5\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\dev\python\python3.13.5\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\dev\python\python3.13.5\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\dev\python\python3.13.5\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\lever\Desktop\disk\app.py", line 196, in register
+    conn = get_db_connection()
+  File "c:\Users\lever\Desktop\disk\app.py", line 57, in get_db_connection
+    return pymysql.connect(**db_config)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\dev\python\python3.13.5\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\dev\python\python3.13.5\Lib\site-packages\pymysql\connections.py", line 723, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] 由于目标计算机积极拒绝，无法连接。)")
+2026-09-16 09:48:56,556 INFO 127.0.0.1 - - [16/Sep/2026 09:48:56] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+2026-09-16 09:53:24,868 WARNING upload_rejected user=user1 ip=127.0.0.1 name=test.php reason=extension
+2026-09-16 09:53:24,872 WARNING upload_rejected user=user1 ip=127.0.0.1 name=fake.png reason=content_mismatch
+2026-09-16 09:53:24,884 INFO upload_allowed user=user1 ip=127.0.0.1 original=user1_secret.txt stored=f267ba1223d84d2bac09c9ddaece415e.txt size=20 type=text/plain
+2026-09-16 09:53:24,908 INFO download user=user1 stored=f267ba1223d84d2bac09c9ddaece415e.txt
+2026-09-16 09:53:24,941 INFO logout user=user1
+2026-09-16 09:55:11,110 WARNING upload_rejected user=user1 ip=127.0.0.1 name=test.php reason=extension
+2026-09-16 09:55:11,112 WARNING upload_rejected user=user1 ip=127.0.0.1 name=fake.png reason=content_mismatch
+2026-09-16 09:55:11,120 INFO upload_allowed user=user1 ip=127.0.0.1 original=user1_secret.txt stored=e1d38a5ac3c24685a4e5e3fcff203c92.txt size=20 type=text/plain
+2026-09-16 09:55:11,138 INFO download user=user1 stored=e1d38a5ac3c24685a4e5e3fcff203c92.txt
+2026-09-16 09:55:11,161 INFO logout user=user1
+2026-09-16 09:55:28,974 ERROR Exception on /register [POST]
+Traceback (most recent call last):
+  File "D:\dev\python\python3.13.5\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\dev\python\python3.13.5\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\dev\python\python3.13.5\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\dev\python\python3.13.5\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\lever\Desktop\disk\app.py", line 214, in register
+    with conn.cursor() as cursor:
+         ~~~~~~~~~~~^^
+TypeError: 'sqlite3.Cursor' object does not support the context manager protocol
+2026-09-16 09:55:28,986 ERROR Exception on /login [POST]
+Traceback (most recent call last):
+  File "D:\dev\python\python3.13.5\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\dev\python\python3.13.5\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\dev\python\python3.13.5\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\dev\python\python3.13.5\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\lever\Desktop\disk\app.py", line 258, in login_post
+    with conn.cursor() as cursor:
+         ~~~~~~~~~~~^^
+TypeError: 'sqlite3.Cursor' object does not support the context manager protocol
+2026-09-16 09:55:46,923 ERROR database_error action=register user=test_user error=near "%": syntax error
+2026-09-16 09:55:46,933 ERROR database_error action=login user=test_user error=near "%": syntax error
+2026-09-16 09:56:00,682 INFO login_success user=test_user ip=127.0.0.1
+2026-09-16 09:56:10,026 WARNING upload_rejected user=user1 ip=127.0.0.1 name=test.php reason=extension
+2026-09-16 09:56:10,030 WARNING upload_rejected user=user1 ip=127.0.0.1 name=fake.png reason=content_mismatch
+2026-09-16 09:56:10,037 INFO upload_allowed user=user1 ip=127.0.0.1 original=user1_secret.txt stored=86aba9b28cec4dfba3e36bd7c7d3e16d.txt size=20 type=text/plain
+2026-09-16 09:56:10,056 INFO download user=user1 stored=86aba9b28cec4dfba3e36bd7c7d3e16d.txt
+2026-09-16 09:56:10,081 INFO logout user=user1
+2026-09-16 09:56:22,009 INFO 127.0.0.1 - - [16/Sep/2026 09:56:22] "GET / HTTP/1.1" 200 -
+2026-09-16 09:56:22,089 INFO 127.0.0.1 - - [16/Sep/2026 09:56:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-09-16 09:56:22,143 INFO 127.0.0.1 - - [16/Sep/2026 09:56:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-09-16 09:56:24,498 INFO 127.0.0.1 - - [16/Sep/2026 09:56:24] "GET /register HTTP/1.1" 200 -
+2026-09-16 09:56:24,531 INFO 127.0.0.1 - - [16/Sep/2026 09:56:24] "[36mGET /static/css/style.css?v=2 HTTP/1.1[0m" 304 -
+2026-09-16 09:56:24,533 INFO 127.0.0.1 - - [16/Sep/2026 09:56:24] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2026-09-16 09:56:45,319 ERROR Exception on /register [POST]
+Traceback (most recent call last):
+  File "D:\dev\python\python3.13.5\Lib\site-packages\pymysql\connections.py", line 661, in connect
+    sock = socket.create_connection(
+        (self.host, self.port), self.connect_timeout, **kwargs
+    )
+  File "D:\dev\python\python3.13.5\Lib\socket.py", line 864, in create_connection
+    raise exceptions[0]
+  File "D:\dev\python\python3.13.5\Lib\socket.py", line 849, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dev\python\python3.13.5\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\dev\python\python3.13.5\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\dev\python\python3.13.5\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\dev\python\python3.13.5\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\lever\Desktop\disk\app.py", line 196, in register
+    username = request.form.get("username", "").strip()
+           ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lever\Desktop\disk\app.py", line 57, in get_db_connection
+    def get_db_connection():
+               ^^^^^^^^^^^^^
+  File "D:\dev\python\python3.13.5\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\dev\python\python3.13.5\Lib\site-packages\pymysql\connections.py", line 723, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] 由于目标计算机积极拒绝，无法连接。)")
+2026-09-16 09:56:45,322 INFO 127.0.0.1 - - [16/Sep/2026 09:56:45] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+2026-09-16 09:57:33,845 INFO 127.0.0.1 - - [16/Sep/2026 09:57:33] "GET /register HTTP/1.1" 200 -
+2026-09-16 09:57:57,141 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-09-16 09:57:57,141 INFO [33mPress CTRL+C to quit[0m
+2026-09-16 09:57:57,141 INFO [33mPress CTRL+C to quit[0m
+2026-09-16 09:58:06,428 INFO 127.0.0.1 - - [16/Sep/2026 09:58:06] "GET /register HTTP/1.1" 200 -
+2026-09-16 09:58:06,479 INFO 127.0.0.1 - - [16/Sep/2026 09:58:06] "POST /register HTTP/1.1" 200 -
+2026-09-16 09:58:06,502 INFO 127.0.0.1 - - [16/Sep/2026 09:58:06] "GET /login HTTP/1.1" 200 -
+2026-09-16 09:58:06,519 INFO login_success user=browser_check_1 ip=127.0.0.1
+2026-09-16 09:58:06,520 INFO 127.0.0.1 - - [16/Sep/2026 09:58:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-09-16 09:58:24,706 INFO 127.0.0.1 - - [16/Sep/2026 09:58:24] "GET /register HTTP/1.1" 200 -
+2026-09-16 09:58:24,896 INFO 127.0.0.1 - - [16/Sep/2026 09:58:24] "GET /static/css/style.css?v=2 HTTP/1.1" 200 -
+2026-09-16 09:58:24,898 INFO 127.0.0.1 - - [16/Sep/2026 09:58:24] "GET /static/js/register.js HTTP/1.1" 200 -
+2026-09-16 09:58:24,973 INFO 127.0.0.1 - - [16/Sep/2026 09:58:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-09-16 09:58:38,537 INFO 127.0.0.1 - - [16/Sep/2026 09:58:38] "POST /register HTTP/1.1" 200 -
+2026-09-16 09:58:38,591 INFO 127.0.0.1 - - [16/Sep/2026 09:58:38] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-09-16 09:58:40,261 INFO 127.0.0.1 - - [16/Sep/2026 09:58:40] "GET /login HTTP/1.1" 200 -
+2026-09-16 09:58:40,311 INFO 127.0.0.1 - - [16/Sep/2026 09:58:40] "[36mGET /static/css/style.css?v=2 HTTP/1.1[0m" 304 -
+2026-09-16 09:58:48,725 INFO login_success user=ray ip=127.0.0.1
+2026-09-16 09:58:48,728 INFO 127.0.0.1 - - [16/Sep/2026 09:58:48] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-09-16 09:58:48,763 INFO 127.0.0.1 - - [16/Sep/2026 09:58:48] "GET /listfiles HTTP/1.1" 200 -
+2026-09-16 09:58:48,810 INFO 127.0.0.1 - - [16/Sep/2026 09:58:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-09-16 10:03:44,332 INFO 127.0.0.1 - - [16/Sep/2026 10:03:44] "GET / HTTP/1.1" 200 -
+2026-09-16 10:03:44,425 INFO 127.0.0.1 - - [16/Sep/2026 10:03:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-09-16 10:03:44,487 INFO 127.0.0.1 - - [16/Sep/2026 10:03:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-09-16 10:03:46,093 INFO 127.0.0.1 - - [16/Sep/2026 10:03:46] "GET /register HTTP/1.1" 200 -
+2026-09-16 10:03:46,133 INFO 127.0.0.1 - - [16/Sep/2026 10:03:46] "[36mGET /static/css/style.css?v=2 HTTP/1.1[0m" 304 -
+2026-09-16 10:03:46,136 INFO 127.0.0.1 - - [16/Sep/2026 10:03:46] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2026-09-16 10:04:02,111 INFO 127.0.0.1 - - [16/Sep/2026 10:04:02] "[31m[1mPOST /register HTTP/1.1[0m" 409 -
+2026-09-16 10:04:02,147 INFO 127.0.0.1 - - [16/Sep/2026 10:04:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-09-16 10:04:03,899 INFO 127.0.0.1 - - [16/Sep/2026 10:04:03] "GET /register HTTP/1.1" 200 -
+2026-09-16 10:04:03,939 INFO 127.0.0.1 - - [16/Sep/2026 10:04:03] "[36mGET /static/css/style.css?v=2 HTTP/1.1[0m" 304 -
+2026-09-16 10:04:03,942 INFO 127.0.0.1 - - [16/Sep/2026 10:04:03] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2026-09-16 10:31:34,631 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-09-16 10:31:34,631 INFO [33mPress CTRL+C to quit[0m
+2026-09-16 10:31:53,274 INFO 127.0.0.1 - - [16/Sep/2026 10:31:53] "GET /register HTTP/1.1" 200 -
+2026-09-16 10:31:53,352 INFO 127.0.0.1 - - [16/Sep/2026 10:31:53] "POST /register HTTP/1.1" 200 -
+2026-09-16 10:31:53,387 INFO 127.0.0.1 - - [16/Sep/2026 10:31:53] "GET /login HTTP/1.1" 200 -
+2026-09-16 10:31:53,417 INFO login_success user=fallback_user_1 ip=127.0.0.1
+2026-09-16 10:31:53,419 INFO 127.0.0.1 - - [16/Sep/2026 10:31:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-09-16 10:32:23,177 INFO 127.0.0.1 - - [16/Sep/2026 10:32:23] "GET /register HTTP/1.1" 200 -
+2026-09-16 10:32:23,458 INFO 127.0.0.1 - - [16/Sep/2026 10:32:23] "GET /static/css/style.css?v=2 HTTP/1.1" 200 -
+2026-09-16 10:32:23,459 INFO 127.0.0.1 - - [16/Sep/2026 10:32:23] "GET /static/js/register.js HTTP/1.1" 200 -
+2026-09-16 10:32:23,548 INFO 127.0.0.1 - - [16/Sep/2026 10:32:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-09-16 10:32:30,847 INFO 127.0.0.1 - - [16/Sep/2026 10:32:30] "GET / HTTP/1.1" 200 -
+2026-09-16 10:32:30,910 INFO 127.0.0.1 - - [16/Sep/2026 10:32:30] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-09-16 10:32:32,439 INFO 127.0.0.1 - - [16/Sep/2026 10:32:32] "GET /login HTTP/1.1" 200 -
+2026-09-16 10:32:32,482 INFO 127.0.0.1 - - [16/Sep/2026 10:32:32] "[36mGET /static/css/style.css?v=2 HTTP/1.1[0m" 304 -
+2026-09-16 10:32:42,046 INFO login_success user=ray ip=127.0.0.1
+2026-09-16 10:32:42,048 INFO 127.0.0.1 - - [16/Sep/2026 10:32:42] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-09-16 10:32:42,112 INFO 127.0.0.1 - - [16/Sep/2026 10:32:42] "GET /listfiles HTTP/1.1" 200 -
+2026-09-16 10:32:42,152 INFO 127.0.0.1 - - [16/Sep/2026 10:32:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-09-16 10:32:44,343 INFO 127.0.0.1 - - [16/Sep/2026 10:32:44] "GET /upload HTTP/1.1" 200 -
+2026-09-16 10:33:06,262 INFO 127.0.0.1 - - [16/Sep/2026 10:33:06] "[31m[1mPOST /upload HTTP/1.1[0m" 400 -
+2026-09-16 10:33:09,240 INFO 127.0.0.1 - - [16/Sep/2026 10:33:09] "GET /upload HTTP/1.1" 200 -
+2026-09-16 10:33:13,112 INFO upload_allowed user=ray ip=127.0.0.1 original=IMG_5252.JPG stored=883374a5416a4e3f8988a65aef96cabe.jpg size=2645283 type=image/jpeg
+2026-09-16 10:33:13,116 INFO 127.0.0.1 - - [16/Sep/2026 10:33:13] "POST /upload HTTP/1.1" 200 -
+2026-09-16 10:33:13,158 INFO 127.0.0.1 - - [16/Sep/2026 10:33:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-09-16 10:33:14,880 INFO 127.0.0.1 - - [16/Sep/2026 10:33:14] "GET /listfiles HTTP/1.1" 200 -
+2026-09-16 10:33:14,919 INFO 127.0.0.1 - - [16/Sep/2026 10:33:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -

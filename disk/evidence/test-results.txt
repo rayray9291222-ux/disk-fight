@@ -1,0 +1,19 @@
+test_01_unauthenticated_core_routes_are_denied (test_security.SecurityRegressionTests.test_01_unauthenticated_core_routes_are_denied) ... ok
+test_02_path_traversal_is_blocked_for_download_and_delete (test_security.SecurityRegressionTests.test_02_path_traversal_is_blocked_for_download_and_delete) ... ok
+test_03_script_and_fake_image_uploads_are_rejected (test_security.SecurityRegressionTests.test_03_script_and_fake_image_uploads_are_rejected) ... 2026-09-16 09:22:45,133 WARNING upload_rejected user=user1 ip=127.0.0.1 name=test.php reason=extension
+2026-09-16 09:22:45,134 WARNING upload_rejected user=user1 ip=127.0.0.1 name=fake.png reason=content_mismatch
+ok
+test_04_valid_text_upload_is_renamed_and_isolated_by_owner (test_security.SecurityRegressionTests.test_04_valid_text_upload_is_renamed_and_isolated_by_owner) ... 2026-09-16 09:22:45,142 INFO upload_allowed user=user1 ip=127.0.0.1 original=user1_secret.txt stored=386ba989ab734a309b25391402fc7c0d.txt size=20 type=text/plain
+2026-09-16 09:22:45,159 INFO download user=user1 stored=386ba989ab734a309b25391402fc7c0d.txt
+ok
+test_05_ssti_probe_is_rendered_as_data_not_template (test_security.SecurityRegressionTests.test_05_ssti_probe_is_rendered_as_data_not_template) ... ok
+test_06_csrf_is_required_for_state_changes (test_security.SecurityRegressionTests.test_06_csrf_is_required_for_state_changes) ... ok
+test_07_logout_clears_session_and_old_access_fails (test_security.SecurityRegressionTests.test_07_logout_clears_session_and_old_access_fails) ... 2026-09-16 09:22:45,179 INFO logout user=user1
+ok
+test_08_cookie_security_attributes_are_present (test_security.SecurityRegressionTests.test_08_cookie_security_attributes_are_present) ... ok
+test_09_no_shell_execution_api_is_used (test_security.SecurityRegressionTests.test_09_no_shell_execution_api_is_used) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.119s
+
+OK

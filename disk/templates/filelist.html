@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的文件 - {{ username }}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="filelist-page">
+    <h2 class="filelist-title">{{ username }} 的文件</h2>
+
+    <div class="filelist-topbar">
+        <a href="/upload" class="btn upload-link">上传新文件</a>
+        <form action="/logout" method="POST" class="delete-form">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <button type="submit" class="btn upload-link">退出登录</button>
+        </form>
+    </div>
+
+    <table class="file-table">
+        <tr>
+            <th>文件名</th>
+            <th>操作</th>
+        </tr>
+        {% for file in files %}
+        <tr>
+            <td>{{ file.display_name }}（{{ file.size }} 字节）</td>
+            <td class="file-actions">
+                <a href="{{ url_for('download_file', filename=file.stored_name) }}" class="btn btn-small">下载</a>
+
+                <form action="/delete"
+                      method="POST"
+                      class="delete-form"
+                      onsubmit="return confirm('确定要删除吗？');">
+
+                    <input type="hidden" name="filename" value="{{ file.stored_name }}">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+
+                    <button type="submit" class="btn btn-small btn-danger">删除</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

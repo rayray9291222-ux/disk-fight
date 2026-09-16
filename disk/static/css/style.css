@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.password-hint {
+    font-size: 12px;
+    color: #666;
+    display: block;
+    margin-top: 4px;
+}
+
+.password-error {
+    font-size: 12px;
+    color: red;
+    display: block;
+    margin-top: 2px;
+    min-height: 18px;  /* 占位，防止页面抖动 */
+}
+
+.password-error.success {
+    color: green;
+}
+
+.login-container {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+/* 标题居中 */
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #333;
+    font-size: 28px;
+}
+
+/* 表单整体居中 */
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* 让表单项整体居中 */
+}
+
+/* 表单项 - 保持左对齐但整体居中 */
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;  /* 占满容器宽度 */
+    max-width: 280px;  /* 限制最大宽度，实现视觉居中 */
+}
+
+.form-group label {
+    width: 70px;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+.button-wrapper {
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+button {
+    padding: 10px 30px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* ===== 文件列表页 ===== */
+
+/* 覆盖全局 body：去掉渐变和 flex 横排，恢复白底纵向布局 */
+body.filelist-page {
+    background: #fff;
+    display: block;
+}
+
+.filelist-title {
+    text-align: center;
+}
+
+.filelist-topbar {
+    text-align: center;
+}
+
+/* 对应原来的 .upload-link：上下 margin 20px，两个链接在一行内居中 */
+.upload-link {
+    margin: 20px;
+    display: inline-block;
+}
+
+/* 统一按钮样式 */
+.btn {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: inherit;
+    line-height: 1.4;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.btn-small {
+    padding: 4px 12px;
+    font-size: 13px;
+}
+
+/* 对应原来的 table / th, td / th，数值完全一样 */
+.file-table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.file-table th,
+.file-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.file-table th {
+    background-color: #f2f2f2;
+}
+
+/* 让下载链接和删除按钮在一行内对齐 */
+.file-actions .btn {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.file-actions .delete-form {
+    display: inline;
+    margin: 0;
+}

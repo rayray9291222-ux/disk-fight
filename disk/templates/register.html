@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>注册 - 我的网盘</title>
+   
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=2">
+</head>
+<body>
+     <div class="login-container">
+        <h2>注册</h2>
+        <form method="post" action="/register" onsubmit="return validateBeforeSubmit()">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            用户名：<input type="text" name="username"><br>
+            密码：<input type="password" name="password" id="password" oninput="checkPassword()"><br>
+            <span id="passwordError" class="password-error"></span><br>
+            <span class="password-hint">密码至少8位，包含大写字母、小写字母、数字、特殊字符</span>
+            <button type="submit" id="submitBtn">注册</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/register.js') }}"></script>
+    <script>
+        // 提交前再次校验（防止绕过）
+        function validateBeforeSubmit() {
+            const pwd = document.getElementById('password').value;
+            if (pwd.length < 8 || !/[A-Z]/.test(pwd) || !/[a-z]/.test(pwd) || 
+                !/[0-9]/.test(pwd) || !/[!@#$%^&*(),.?":{}|<>]/.test(pwd)) {
+                alert('密码不符合要求，请修改');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
